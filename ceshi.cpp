@@ -89,16 +89,16 @@ void RTU::setRTUid(int id){
 void RTU::setStatus(int choice, bool change){
     switch (choice) {
         case 1:
-            B1 = change;
+            RTULogData.B1 = change;
             break;
         case 2:
-            B2 = change;
+            RTULogData.B2 = change;
             break;
         case 3:
-            S1 = change;
+            RTULogData.S1 = change;
             break;
         case 4:
-            S2 = change;
+            RTULogData.S2 = change;
             break;
         default:
             cout << "set status failed" << endl;
@@ -106,10 +106,10 @@ void RTU::setStatus(int choice, bool change){
     }
 }
 void RTU::setVoltage(unsigned short V){
-    Voltage = V;
+    RTULogData.Voltage = V;
 }
 void RTU::setTypeEvent(string str){
-    typeEvent = str;
+    RTULogData.typeEvent = str;
 }
 RTU::RTU(){
     cout << "Globel RTU initilize"<<endl;
